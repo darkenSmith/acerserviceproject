@@ -1,0 +1,40 @@
+# Template PHP Build
+
+# This template allows you to validate your PHP application.
+# The workflow allows running tests and code linting on the default branch.
+
+image: composer:2.0
+
+
+pipelines:
+  default:
+    - parallel:
+
+           
+        - step:
+            name: Test
+            script:
+              - composer install
+              -  ./vendor/bin/phpunit test
+            caches:
+              - composer
+        - step:
+            name: Lint
+            script:
+              - composer install
+              - ./vendor/bin/phplint . --exclude=vendor
+            caches:
+              - composer
+    - parallel:           
+        - step:
+            name: 'Deployment to Staging'
+            deployment: staging
+            script:
+            - echo "Your deployment to staging script goes here..."
+    - parallel:   
+        - step:
+            name: 'Deployment to Production'
+            deployment: production
+            trigger: 'manual'
+            script:
+            - echo "Your deployment to production script goes here...
