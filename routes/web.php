@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ImportController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,8 @@ Route::get('/import', function () {
     return view('import');
 });
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::post('/upload', [App\Http\Controllers\ImportController::class, 'upload'])->name('upload');
+Route::post('upload', [ImportController::class, 'upload']);

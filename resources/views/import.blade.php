@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-<title>Acer Service</title>
 
+<title>Acer Service</title>
+@include('layouts.head')
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -21,6 +22,8 @@
         margin-left:10rem;
     }
 </style>
+
+
 </head>
 <body>
     
@@ -28,7 +31,38 @@
 @include('layouts.header')
 <div class="acerbox">
 <h1>Import Acer Batch</h1>
-<input type='file' name='upload'/>
+<div class="form-group">
+<form method="POST" enctype="multipart/form-data" id="upload-file" action="{{ url('upload') }}" >
+                 
+                 <div class="row">
+        
+                     <div class="col-md-12">
+                         <div class="form-group">
+                             <input type="file" name="file" placeholder="Choose file" id="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" >
+                             @csrf
+                               
+                               @error('file')
+                               <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                               @enderror
+                         </div>
+                                            @if(session()->has('status'))
+                        <div class="alert alert-success">
+                            {{ session()->get('status') }}
+                        </div>
+                @endif
+                @if(session()->has('err'))
+                        <div class="alert alert-warning">
+                            {{ session()->get('err') }}
+                        </div>
+                @endif
+                     </div>
+                        
+                     <div class="col-md-12">
+                         <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                     </div>
+                 </div>     
+             </form>
+</div>
 
 </div>
 
