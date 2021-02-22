@@ -28,7 +28,9 @@
         "nunomaduro/collision": "^5.0",
         "phpunit/phpunit": "^9.3.3",
         "maatwebsite/excel": "^3.1",
-        "shuchkin/simplexlsx": "^0.8.21"
+        "shuchkin/simplexlsx": "^0.8.21",
+        "phpoffice/phpspreadsheet": "^1.16"
+        
         
     },
     "config": {
