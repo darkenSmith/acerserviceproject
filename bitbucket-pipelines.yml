@@ -9,15 +9,12 @@ image: composer:2.0
 pipelines:
   default:
     - parallel:
-        - step:
-            name: update 
-            script: 
-            - composer update
+
            
         - step:
             name: Test
             script:
-              - composer install
+              - composer update
               -  ./vendor/bin/phpunit test
             caches:
               - composer
