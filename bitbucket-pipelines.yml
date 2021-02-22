@@ -3,6 +3,9 @@
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
 image: atlassian/default-image:2
+      credentials:
+        username: alexstone92
+        password: ${{ pass}}
 
 pipelines:
   default:
