@@ -23,7 +23,7 @@ pipelines:
               - ./vendor/bin/phplint . --exclude=vendor
             caches:
               - composer
-              
+    - parallel:           
         - step:
             name: 'Deployment to Staging'
             deployment: staging
