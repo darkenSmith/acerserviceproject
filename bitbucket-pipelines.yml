@@ -29,6 +29,7 @@ pipelines:
             deployment: staging
             script:
             - echo "Your deployment to staging script goes here..."
+    - parallel:   
         - step:
             name: 'Deployment to Production'
             deployment: production
