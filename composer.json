@@ -16,7 +16,6 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
         "maatwebsite/excel": "^3.0",
-        "phpoffice/phpexcel": "dev-master",
         "phpoffice/phpspreadsheet": "^1.16",
         "shuchkin/simplexlsx": "^0.8.21",
         "sudiptpa/guid": "^1.0"
@@ -29,7 +28,6 @@
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
         "phpunit/phpunit": "^9.3.3",
-        "phpoffice/phpexcel": "dev-master",
         "shuchkin/simplexlsx": "^0.8.21",
         "phpoffice/phpspreadsheet": "^1.16"
         
