@@ -15,7 +15,7 @@ pipelines:
             name: Test
             script:
               - composer install
-              -  ./vendor/bin/phpunit test
+              -  ./vendor/phpunit/phpunit/phpunit
             caches:
               - composer
         - step:
