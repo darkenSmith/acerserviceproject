@@ -14,7 +14,7 @@ pipelines:
         - step:
             name: Test
             script:
-              -  ./vendor/bin/phpunit
+              -  ./vendor/phpunit/phpunit/phpunit
             caches:
               - composer
         - step:
