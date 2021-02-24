@@ -27,7 +27,7 @@ class ExportController extends Controller{
      $filename = 'ACER_Retail-'.$nowdate.'-'.$batchid;
     
   
-     $this->createsheet($results, $filename);
+     $this->createsheet($results, $filename, $batchid);
 
      foreach($results as $item){
     
@@ -48,7 +48,7 @@ class ExportController extends Controller{
 
 
 
-    public function createsheet($data, $file){
+    public function createsheet($data, $file,$batch){
 
             // (B) CREATE A NEW SPREADSHEET
     $spreadsheet = new Spreadsheet();
@@ -58,15 +58,24 @@ class ExportController extends Controller{
     $sheet->setCellValue('A1', 'CaseNumber');
     $sheet->getColumnDimension('A')->setWidth(20);
     $sheet->setCellValue('B1', 'Partnum');
+    $sheet->getColumnDimension('B')->setWidth(20);
     $sheet->setCellValue('C1', 'Original Box');
+    $sheet->getColumnDimension('C')->setWidth(20);
     $sheet->setCellValue('D1', 'Monitor Updated Code');
+    $sheet->getColumnDimension('D')->setWidth(20);
     $sheet->setCellValue('E1', 'Model Number');
+    $sheet->getColumnDimension('E')->setWidth(20);
     $sheet->setCellValue('F1', 'Date Scanned');
+    $sheet->getColumnDimension('F')->setWidth(20);
     $sheet->setCellValue('G1', 'Booking in Comments');
+    $sheet->getColumnDimension('G')->setWidth(20);
     $sheet->setCellValue('H1', 'Original Box');
+    $sheet->getColumnDimension('H')->setWidth(20);
     $sheet->setCellValue('I1', 'Retailer Return Reference');
+    $sheet->getColumnDimension('I')->setWidth(20);
     $sheet->setCellValue('J1', 'SerialNumber');
-    $sheet->setTitle('Arr');
+    $sheet->getColumnDimension('J')->setWidth(20);
+    $sheet->setTitle($batch);
 
    
 
