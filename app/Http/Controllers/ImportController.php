@@ -168,10 +168,9 @@ class ImportController extends Controller
 
           // $nextId++;
               }
-           return redirect('import')->with('status', 'File Has been uploaded successfully');
+          
             }
           }
-      
 
 /////
         }
@@ -182,10 +181,7 @@ class ImportController extends Controller
         return redirect('import')->with('status',  $messge);
 
       }
-    
-
-    
-
+      return redirect('import')->with('status', 'File Has been uploaded successfully');
     }
 
 }

@@ -22,7 +22,12 @@ Route::get('/import', function () {
     return view('import');
 });
 
+
+
 //Auth::routes();
+
+Route::get('export', [App\Http\Controllers\ExportController::class, 'index'])->name('export');
+Route::get('export/download', [App\Http\Controllers\ExportController::class, 'download']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 //Route::post('/upload', [App\Http\Controllers\ImportController::class, 'upload'])->name('upload');
