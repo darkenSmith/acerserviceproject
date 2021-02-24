@@ -14,12 +14,14 @@ pipelines:
         - step:
             name: Test
             script:
+              - composer install
               -  ./vendor/phpunit/phpunit/phpunit
             caches:
               - composer
         - step:
             name: Lint
             script:
+              - composer install
               - ./vendor/bin/phplint . --exclude=vendor
             caches:
               - composer
