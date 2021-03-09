@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+    mysql:
+        container_name: ${COMPOSE_PROJECT_NAME}_mysql
+        build:
+            context: ./mysql
+            args:
+                - MYSQL_CONTAINER_USER=${MYSQL_CONTAINER_USER}
+                - MYSQL_CONTAINER_GROUP=${MYSQL_CONTAINER_GROUP}
+        volumes:
+            - ../logs/mysql:${MYSQL_LOG_DIR}
+            - ../dbs/mysql:${MYSQL_DATA_DIR}
+        ports:
+            - ${MYSQL_EXPOSED_PORT}:3306
+        environment:
+            - MYSQL_CONTAINER_USER=${MYSQL_CONTAINER_USER}
+            - MYSQL_CONTAINER_GROUP=${MYSQL_CONTAINER_GROUP}
+            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    php-fpm:
+        links:
+            - mysql:mysql

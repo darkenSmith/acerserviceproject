@@ -1,5 +1,5 @@
 version: '3'
- 
+
 services:
     apache:
         container_name: ${COMPOSE_PROJECT_NAME}_apache
@@ -25,22 +25,6 @@ services:
             - APACHE_EXPOSED_PORT=${APACHE_EXPOSED_PORT}
             - WEB_USER=${WEB_USER}
             - WEB_GROUP=${WEB_GROUP}
-    mysql:
-        container_name: ${COMPOSE_PROJECT_NAME}_mysql
-        build:
-            context: ./mysql
-            args:
-                - MYSQL_CONTAINER_USER=${MYSQL_CONTAINER_USER}
-                - MYSQL_CONTAINER_GROUP=${MYSQL_CONTAINER_GROUP}
-        volumes:
-            - ../logs/mysql:${MYSQL_LOG_DIR}
-            - ../database:${MYSQL_DATA_DIR}
-        ports:
-            - ${MYSQL_EXPOSED_PORT}:3306
-        environment:
-            - MYSQL_CONTAINER_USER=${MYSQL_CONTAINER_USER}
-            - MYSQL_CONTAINER_GROUP=${MYSQL_CONTAINER_GROUP}
-            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
     php-fpm:
         container_name: ${COMPOSE_PROJECT_NAME}_php-fpm
         build:
@@ -50,8 +34,6 @@ services:
                 - WEB_GROUP=${WEB_GROUP}
                 - PHP_ROOT_DIR=${PHP_ROOT_DIR}
                 - PHP_FPM_PORT=${PHP_FPM_PORT}
-        links:
-            - mysql:mysql
         volumes:
             - ../html:${WEB_FOLDER}
             - ../logs/php:${PHP_ROOT_DIR}/logs

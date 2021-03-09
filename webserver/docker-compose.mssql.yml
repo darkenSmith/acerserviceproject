@@ -1,0 +1,30 @@
+
+version: '3'
+ 
+volumes:
+  mssqldata:
+
+services:
+    mssql:
+        container_name: ${COMPOSE_PROJECT_NAME}_mssql
+        build:
+            context: ./mssql
+            args:
+                - MSSQL_PID=${MSSQL_PID}
+                - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
+                - MSSQL_LOG_DIR=${MSSQL_LOG_DIR}
+                - MSSQL_DATA_DIR=${MSSQL_DATA_DIR}
+        volumes:
+            - ../logs/mssql:${MSSQL_LOG_DIR}
+            - mssqldata:${MSSQL_DATA_DIR}
+        ports:
+            - ${MSSQL_EXPOSED_PORT}:1433
+        environment:
+            - MSSQL_PID=${MSSQL_PID}
+            - MSSQL_SA_PASSWORD=${MSSQL_SA_PASSWORD}
+            - MSSQL_LOG_DIR=${MSSQL_LOG_DIR}
+            - MSSQL_DATA_DIR=${MSSQL_DATA_DIR}
+            - ACCEPT_EULA=Y
+    php-fpm:
+        links:
+            - mssql:mssql

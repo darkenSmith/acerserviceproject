@@ -74,8 +74,6 @@ RUN echo "ServerName $COMPOSE_PROJECT_NAME" >> /etc/apache2/apache2.conf
 COPY default.conf /etc/apache2/sites-available/000-default.conf
 COPY default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
 
-
-
 RUN sed -ri -e 's!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g' \
 		    -e 's!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g' "/etc/apache2/apache2.conf"
 

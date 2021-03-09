@@ -19,7 +19,7 @@
     .acerbox{
 
         padding:12rem;
-        margin-left:10rem;
+        margin-left:1rem;
     }
 </style>
 
@@ -30,6 +30,12 @@
 <div class="container-fluid">
 @include('layouts.header')
 <div class="acerbox">
+<?php
+$user = getenv("username");
+$user = str_replace("."," ",$user);
+
+
+?>
 <h1>Import Acer Batch</h1>
 <div class="form-group">
 <form method="POST" enctype="multipart/form-data" id="upload-file" action="{{ url('upload') }}" >
@@ -60,7 +66,8 @@
                      <div class="col-md-12">
                          <button type="submit" class="btn btn-primary" id="submit">Submit</button>
                      </div>
-                 </div>     
+                 </div> 
+                 <hr>    
              </form>
 </div>
 </div>

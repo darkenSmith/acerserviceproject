@@ -58,14 +58,21 @@ l-5 -418 242 0 243 0 -6 373 c-7 439 -19 542 -69 617 -41 59 -113 82 -219 70z"/>
       <div class="collapse navbar-collapse" id="navbarsExample02">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{{URL::to('./')}}">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="{{URL::to('/import')}}">Import</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{URL::to('/export')}}">Export</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{URL::to('/dashboard')}}">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{URL::to('/reports')}}">Reports</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-md-0">
-          <input class="form-control" type="text" placeholder="Search">
-        </form>
+
       </div>
     </nav>

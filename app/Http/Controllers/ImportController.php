@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\import;
 USE Illuminate\Support\Facades\DB;
 use SimpleXLSX;
 use Illuminate\Support\Str;
@@ -16,7 +15,14 @@ class ImportController extends Controller
     //
     public function upload(Request $request)
     {
+      $user = getenv("username");
+      $user = str_replace("."," ",$user);
 
+      if($user == 'alex smith'){
+
+        $user = 'Alex';
+
+      }
       
       $validatedData = $request->validate([
         'file' => 'required|max:10000|mimes:xlx,xls,xlsx',
@@ -110,10 +116,10 @@ class ImportController extends Controller
                 'CustomerRef' => $refnum.'/'.$slp, 
                 'AccountCode' => 'ACERRETAIL',
                  'Deadline' => $scandate , 
-                 'CreatedBy' => 'ACERIMPORT', 
+                 'CreatedBy' => 'Acer.Retail', 
                  'FirstLevelFault' => 'Assistance',
                   'flag' => 'Query',
-                  'Chargeable' => 1, 
+                  'Chargeable' => 0, 
                   'LastAddress1' => '282 Bath Road',
                   'LastAddress2' => 'Heathrow Boulevard 111',
                    'LastAddress3' => 'West Drayton',
@@ -123,7 +129,7 @@ class ImportController extends Controller
                     'Brand' => 'Acer',
                     'CollectionDate' => $scandate, 
                     'BER' => 0, 
-                    'CaseSkill' => 'REPAIR_CENTER_GROUP', 
+                    'CaseSkill' => 'Acer.Retail', 
                     'SLARemains' => '5BD', 
                     'BoxQuantity' => $ogbox, 
                     'ServiceCode' => 42, 
@@ -148,9 +154,9 @@ class ImportController extends Controller
             'iDataRowId' => $guid_3,
             'iDataRowId2' =>$guid_4, 
              'CaseNumber' => $nextId, 
-             'Summary' => 'New Case created with Status Awaiting Return and assigned to the skill REPAIR_CENTER_GROUP, Deadline ',
+             'Summary' => 'New Case created with Status Awaiting Return and assigned to the skill Acer.Retail, Deadline ',
              'Action' => 'New Case',
-              'ActionBy' =>'ACERIMPORT', 
+              'ActionBy' =>'Acer.Retail', 
               'ActionDate' => $nowdate 
          
         ]);

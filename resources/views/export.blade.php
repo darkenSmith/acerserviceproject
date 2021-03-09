@@ -41,7 +41,8 @@
         
                      <div class="col-md-12">
                          <div class="form-group">
-                             <input type="input" name="batch" placeholder="Enter Batch Number" id="batch" >
+                             <input type="input" class="form-control" name="batch" placeholder="Enter Batch Number" id="batch" >
+                             <input type="input" class="form-control" name="stat" placeholder="Enter status(optional)" id="stat" >
                              @csrf
                                
                                @error('file')

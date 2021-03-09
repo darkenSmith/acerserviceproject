@@ -1,0 +1,115 @@
+2021-03-01 13:24:49.23 Server      Microsoft SQL Server 2019 (RTM-CU9) (KB5000642) - 15.0.4102.2 (X64) 
+	Jan 25 2021 20:16:12 
+	Copyright (C) 2019 Microsoft Corporation
+	Developer Edition (64-bit) on Linux (Ubuntu 20.04.1 LTS) <X64>
+2021-03-01 13:24:49.28 Server      UTC adjustment: 0:00
+2021-03-01 13:24:49.31 Server      (c) Microsoft Corporation.
+2021-03-01 13:24:49.33 Server      All rights reserved.
+2021-03-01 13:24:49.34 Server      Server process ID is 40.
+2021-03-01 13:24:49.36 Server      Logging SQL Server messages in file '/var/opt/mssql/log/errorlog'.
+2021-03-01 13:24:49.39 Server      Registry startup parameters: 
+	 -d /var/opt/mssql/data/master.mdf
+	 -l /var/opt/mssql/data/mastlog.ldf
+	 -e /var/opt/mssql/log/errorlog
+2021-03-01 13:24:49.45 Server      SQL Server detected 1 sockets with 2 cores per socket and 4 logical processors per socket, 4 total logical processors; using 4 logical processors based on SQL Server licensing. This is an informational message; no user action is required.
+2021-03-01 13:24:49.52 Server      SQL Server is starting at normal priority base (=7). This is an informational message only. No user action is required.
+2021-03-01 13:24:49.56 Server      Detected 10176 MB of RAM. This is an informational message; no user action is required.
+2021-03-01 13:24:49.59 Server      Using conventional memory in the memory manager.
+2021-03-01 13:24:49.67 Server      Page exclusion bitmap is enabled.
+2021-03-01 13:24:49.73 Server      Buffer pool extension is not supported on Linux platform.
+2021-03-01 13:24:49.75 Server      Buffer Pool: Allocating 2097152 bytes for 1550011 hashPages.
+2021-03-01 13:24:52.33 Server      Buffer pool extension is already disabled. No action is necessary.
+2021-03-01 13:24:57.94 Server      Successfully initialized the TLS configuration. Allowed TLS protocol versions are ['1.0 1.1 1.2']. Allowed TLS ciphers are ['ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA'].
+2021-03-01 13:24:58.17 Server      Query Store settings initialized with enabled = 1, 
+2021-03-01 13:24:58.26 Server      The maximum number of dedicated administrator connections for this instance is '1'
+2021-03-01 13:24:58.27 Server      Node configuration: node 0: CPU mask: 0x000000000000000f:0 Active CPU mask: 0x000000000000000f:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.
+2021-03-01 13:24:58.38 Server      Using dynamic lock allocation.  Initial allocation of 2500 Lock blocks and 5000 Lock Owner blocks per node.  This is an informational message only.  No user action is required.
+2021-03-01 13:24:58.53 Server      In-Memory OLTP initialized on lowend machine.
+2021-03-01 13:24:58.73 Server      CLR version v4.0.30319 loaded.
+2021-03-01 13:24:59.28 Server      [INFO] Created Extended Events session 'hkenginexesession'
+2021-03-01 13:24:59.31 Server      Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+2021-03-01 13:24:59.44 Server      Total Log Writer threads: 2. This is an informational message; no user action is required.
+2021-03-01 13:24:59.49 Server      clflushopt is selected for pmem flush operation.
+2021-03-01 13:24:59.56 Server      Software Usage Metrics is disabled.
+2021-03-01 13:24:59.66 spid9s      [1]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1.
+2021-03-01 13:24:59.70 spid9s      Starting up database 'master'.
+2021-03-01 13:25:00.42 spid9s      Refresh DEK for DBID: [1] File Id: [1] - Zeroring encryption state
+2021-03-01 13:25:00.46 spid9s      The DEK is already set for DBID = [1] file id 1.
+2021-03-01 13:25:00.78 Server      Common language runtime (CLR) functionality initialized.
+2021-03-01 13:25:01.15 spid9s      Refresh DEK for DBID: [1] File Id: [2] - Zeroring encryption state
+2021-03-01 13:25:01.18 spid9s      The DEK is already set for DBID = [1] file id 2.
+2021-03-01 13:25:03.02 spid9s      Resource governor reconfiguration succeeded.
+2021-03-01 13:25:03.06 spid9s      SQL Server Audit is starting the audits. This is an informational message. No user action is required.
+2021-03-01 13:25:03.12 spid9s      SQL Server Audit has started the audits. This is an informational message. No user action is required.
+2021-03-01 13:25:03.92 spid9s      SQL Trace ID 1 was started by login "sa".
+2021-03-01 13:25:04.03 spid9s      Server name is '4989dd13ea6a'. This is an informational message only. No user action is required.
+2021-03-01 13:25:04.25 spid9s      [4]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1.
+2021-03-01 13:25:04.25 spid45s     Always On: The availability replica manager is starting. This is an informational message only. No user action is required.
+2021-03-01 13:25:04.27 spid12s     [32767]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1.
+2021-03-01 13:25:04.30 spid9s      Starting up database 'msdb'.
+2021-03-01 13:25:04.41 spid45s     Always On: The availability replica manager is waiting for the instance of SQL Server to allow client connections. This is an informational message only. No user action is required.
+2021-03-01 13:25:04.41 spid12s     Starting up database 'mssqlsystemresource'.
+2021-03-01 13:25:04.58 spid12s     Refresh DEK for DBID: [32767] File Id: [1] - Copying encryption state
+2021-03-01 13:25:04.62 spid12s     DBID: [32767] File Header for File Id: [1] was read with state = 0.
+2021-03-01 13:25:04.67 spid12s     DBID: [32767] No DEK update for File Id: [1] while existing DEK is null.
+2021-03-01 13:25:04.75 spid12s     The resource database build version is 15.00.4102. This is an informational message only. No user action is required.
+2021-03-01 13:25:04.91 spid12s     Refresh DEK for DBID: [32767] File Id: [2] - Copying encryption state
+2021-03-01 13:25:04.99 spid12s     DBID: [32767] File Header for File Id: [2] was read with state = 0.
+2021-03-01 13:25:05.06 spid12s     DBID: [32767] No DEK update for File Id: [2] while existing DEK is null.
+2021-03-01 13:25:05.37 spid12s     [3]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1.
+2021-03-01 13:25:05.41 spid9s      Refresh DEK for DBID: [4] File Id: [1] - Copying encryption state
+2021-03-01 13:25:05.46 spid12s     Starting up database 'model'.
+2021-03-01 13:25:05.52 spid9s      DBID: [4] File Header for File Id: [1] was read with state = 0.
+2021-03-01 13:25:05.58 spid43s     A self-generated certificate was successfully loaded for encryption.
+2021-03-01 13:25:05.60 spid9s      DBID: [4] No DEK update for File Id: [1] while existing DEK is null.
+2021-03-01 13:25:05.74 spid43s     Server is listening on [ 'any' <ipv6> 1433].
+2021-03-01 13:25:05.81 spid43s     Server is listening on [ 'any' <ipv4> 1433].
+2021-03-01 13:25:05.99 Server      Server is listening on [ ::1 <ipv6> 1434].
+2021-03-01 13:25:06.03 Server      Server is listening on [ 127.0.0.1 <ipv4> 1434].
+2021-03-01 13:25:06.10 Server      Dedicated admin connection support was established for listening locally on port 1434.
+2021-03-01 13:25:06.23 spid43s     Server is listening on [ ::1 <ipv6> 1431].
+2021-03-01 13:25:06.28 spid43s     Server is listening on [ 127.0.0.1 <ipv4> 1431].
+2021-03-01 13:25:06.35 spid43s     SQL Server is now ready for client connections. This is an informational message; no user action is required.
+2021-03-01 13:25:06.47 spid12s     Refresh DEK for DBID: [3] File Id: [1] - Zeroring encryption state
+2021-03-01 13:25:06.52 spid12s     The DEK is already set for DBID = [3] file id 1.
+2021-03-01 13:25:06.65 spid9s      Refresh DEK for DBID: [4] File Id: [2] - Copying encryption state
+2021-03-01 13:25:06.68 spid9s      DBID: [4] File Header for File Id: [2] was read with state = 0.
+2021-03-01 13:25:06.75 spid9s      DBID: [4] No DEK update for File Id: [2] while existing DEK is null.
+2021-03-01 13:25:07.23 spid12s     Refresh DEK for DBID: [3] File Id: [2] - Zeroring encryption state
+2021-03-01 13:25:07.26 spid12s     The DEK is already set for DBID = [3] file id 2.
+2021-03-01 13:25:07.67 spid12s     Clearing tempdb database.
+2021-03-01 13:25:09.97 spid12s     Refresh DEK for DBID: [2] File Id: [1] - Copying encryption state
+2021-03-01 13:25:10.00 spid12s     DBID: [2] File Header for File Id: [1] was read with state = 0.
+2021-03-01 13:25:10.03 spid12s     DBID: [2] No DEK update for File Id: [1] while existing DEK is null.
+2021-03-01 13:25:10.27 spid12s     Refresh DEK for DBID: [2] File Id: [2] - Copying encryption state
+2021-03-01 13:25:10.29 spid12s     DBID: [2] File Header for File Id: [2] was read with state = 0.
+2021-03-01 13:25:10.33 spid12s     DBID: [2] No DEK update for File Id: [2] while existing DEK is null.
+2021-03-01 13:25:10.60 spid12s     [2]. Feature Status: PVS: 0. CTR: 0. ConcurrentPFSUpdate: 1.
+2021-03-01 13:25:10.64 spid12s     Starting up database 'tempdb'.
+2021-03-01 13:25:11.11 spid12s     Refresh DEK for DBID: [2] File Id: [1] - Copying encryption state
+2021-03-01 13:25:11.14 spid12s     DBID: [2] File Header for File Id: [1] was read with state = 0.
+2021-03-01 13:25:11.17 spid12s     DBID: [2] No DEK update for File Id: [1] while existing DEK is null.
+2021-03-01 13:25:11.55 spid12s     Refresh DEK for DBID: [2] File Id: [2] - Copying encryption state
+2021-03-01 13:25:11.58 spid12s     DBID: [2] File Header for File Id: [2] was read with state = 0.
+2021-03-01 13:25:11.61 spid12s     DBID: [2] No DEK update for File Id: [2] while existing DEK is null.
+2021-03-01 13:25:13.70 spid12s     Refresh DEK for DBID: [2] File Id: [3] - Copying encryption state
+2021-03-01 13:25:13.71 spid12s     DBID: [2] File Header for File Id: [3] was read with state = 0.
+2021-03-01 13:25:13.74 spid12s     DBID: [2] No DEK update for File Id: [3] while existing DEK is null.
+2021-03-01 13:25:14.36 spid12s     Refresh DEK for DBID: [2] File Id: [4] - Copying encryption state
+2021-03-01 13:25:14.39 spid12s     DBID: [2] File Header for File Id: [4] was read with state = 0.
+2021-03-01 13:25:14.42 spid12s     DBID: [2] No DEK update for File Id: [4] while existing DEK is null.
+2021-03-01 13:25:14.91 spid12s     Refresh DEK for DBID: [2] File Id: [5] - Copying encryption state
+2021-03-01 13:25:14.95 spid12s     DBID: [2] File Header for File Id: [5] was read with state = 0.
+2021-03-01 13:25:14.98 spid12s     DBID: [2] No DEK update for File Id: [5] while existing DEK is null.
+2021-03-01 13:25:15.07 spid12s     The tempdb database has 4 data file(s).
+2021-03-01 13:25:15.14 spid45s     The Service Broker endpoint is in disabled or stopped state.
+2021-03-01 13:25:15.16 spid45s     The Database Mirroring endpoint is in disabled or stopped state.
+2021-03-01 13:25:15.24 spid45s     Service Broker manager has started.
+2021-03-01 13:25:15.25 spid9s      Recovery is complete. This is an informational message only. No user action is required.
+2021-03-01 13:31:01.06 spid58      Attempting to load library 'xplog70.dll' into memory. This is an informational message only. No user action is required.
+2021-03-01 13:31:01.86 spid58      Using 'xplog70.dll' version '2019.150.4102' to execute extended stored procedure 'xp_msver'. This is an informational message only; no user action is required.
+2021-03-01 14:47:45.05 spid9s      Always On: The availability replica manager is going offline because SQL Server is shutting down. This is an informational message only. No user action is required.
+2021-03-01 14:47:45.09 spid9s      SQL Server is terminating in response to a 'stop' request from Service Control Manager. This is an informational message only. No user action is required.
+2021-03-01 14:47:45.24 spid45s     Service Broker manager has shut down.
+2021-03-01 14:47:45.28 spid9s      .NET Framework runtime has been stopped.
+2021-03-01 14:47:45.59 spid9s      SQL Trace was stopped due to server shutdown. Trace ID = '1'. This is an informational message only; no user action is required.

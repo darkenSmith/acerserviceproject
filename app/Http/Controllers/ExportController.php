@@ -18,8 +18,9 @@ class ExportController extends Controller{
     public function download(Request $request){
    
      $batchid = $request->get("batch");
+     $stat = $request->get("stat");
 
-     $results = DB::select('select * from  [dbo].[ACERimports](?)', array($batchid));
+     $results = DB::select('select * from  [dbo].[ACERimports](?,?)', array($batchid,$stat));
 
      $now = strtotime(now());
      $nowdate = date("Y-m-d",$now);
@@ -29,20 +30,7 @@ class ExportController extends Controller{
   
      $this->createsheet($results, $filename, $batchid);
 
-     foreach($results as $item){
-    
 
-        $casenumber = $item->CaseNumber;
-        $MONITORCODE = $item->MONITORCODE;
-        $box = $item->BOX;
-        $scanned = $item->SCANNED;
-        $model = $item->MODEL;
-        $missing = $item->MISSING;
-        $bookcom = $item->BOOKINGCOMMENT;
-        $partnum = $item->PARTNUM;
-        $custref = $item->CustomerRef;
-        $serialnum = $item->SerialNumber;
-     }
     }
 
 
@@ -65,16 +53,20 @@ class ExportController extends Controller{
     $sheet->getColumnDimension('D')->setWidth(20);
     $sheet->setCellValue('E1', 'Model Number');
     $sheet->getColumnDimension('E')->setWidth(20);
-    $sheet->setCellValue('F1', 'Date Scanned');
+    $sheet->setCellValue('F1', 'Missing');
     $sheet->getColumnDimension('F')->setWidth(20);
-    $sheet->setCellValue('G1', 'Booking in Comments');
+    $sheet->setCellValue('G1', 'Scanned Date');
     $sheet->getColumnDimension('G')->setWidth(20);
-    $sheet->setCellValue('H1', 'Original Box');
+    $sheet->setCellValue('H1', 'Booking in Comments');
     $sheet->getColumnDimension('H')->setWidth(20);
     $sheet->setCellValue('I1', 'Retailer Return Reference');
     $sheet->getColumnDimension('I')->setWidth(20);
     $sheet->setCellValue('J1', 'SerialNumber');
     $sheet->getColumnDimension('J')->setWidth(20);
+    $sheet->setCellValue('K1', 'Notes');
+    $sheet->getColumnDimension('K')->setWidth(20);
+    $sheet->setCellValue('L1', 'Status');
+    $sheet->getColumnDimension('L')->setWidth(20);
     $sheet->setTitle($batch);
 
    
