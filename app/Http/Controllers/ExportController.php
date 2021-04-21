@@ -49,24 +49,26 @@ class ExportController extends Controller{
     $sheet->getColumnDimension('B')->setWidth(20);
     $sheet->setCellValue('C1', 'Original Box');
     $sheet->getColumnDimension('C')->setWidth(20);
-    $sheet->setCellValue('D1', 'Monitor Updated Code');
+    $sheet->setCellValue('D1', 'Model Number');
     $sheet->getColumnDimension('D')->setWidth(20);
-    $sheet->setCellValue('E1', 'Model Number');
+    $sheet->setCellValue('E1', 'Missing');
     $sheet->getColumnDimension('E')->setWidth(20);
-    $sheet->setCellValue('F1', 'Missing');
+    $sheet->setCellValue('F1', 'Discrpency');
     $sheet->getColumnDimension('F')->setWidth(20);
-    $sheet->setCellValue('G1', 'Scanned Date');
-    $sheet->getColumnDimension('G')->setWidth(20);
-    $sheet->setCellValue('H1', 'Booking in Comments');
+    $sheet->setCellValue('G1', 'Scan date');
     $sheet->getColumnDimension('H')->setWidth(20);
-    $sheet->setCellValue('I1', 'Retailer Return Reference');
+    $sheet->setCellValue('H1', 'Damage');
+    $sheet->getColumnDimension('H')->setWidth(20);
+    $sheet->setCellValue('I1', 'Comments');
     $sheet->getColumnDimension('I')->setWidth(20);
-    $sheet->setCellValue('J1', 'SerialNumber');
+    $sheet->setCellValue('J1', 'SLP/BATCH');
     $sheet->getColumnDimension('J')->setWidth(20);
-    $sheet->setCellValue('K1', 'Notes');
+    $sheet->setCellValue('K1', 'SERIAL NUMBER');
     $sheet->getColumnDimension('K')->setWidth(20);
-    $sheet->setCellValue('L1', 'Status');
+    $sheet->setCellValue('L1', 'Case description');
     $sheet->getColumnDimension('L')->setWidth(20);
+    $sheet->setCellValue('M1', 'STATUS');
+    $sheet->getColumnDimension('M')->setWidth(20);
     $sheet->setTitle($batch);
 
    

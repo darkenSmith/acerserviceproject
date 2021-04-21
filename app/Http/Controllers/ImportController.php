@@ -24,7 +24,7 @@ class ImportController extends Controller
 
       }
       
-      $validatedData = $request->validate([
+      $request->validate([
         'file' => 'required|max:10000|mimes:xlx,xls,xlsx',
 
        ]);
@@ -67,18 +67,18 @@ class ImportController extends Controller
 
             $refnum = $cell['Retailer Return Reference'];
             $serial = $cell['Serial Number']; 
-            $slp = $cell['SLP number '];
+            $slp = $cell['SLP'];
             $acerpart = $cell['Acer Part Code'];
-            $model = $cell['Model Number '];
-            $montiorcode = $cell['Monitor Updated Code'];
+            $model = $cell['Model'];
             $missing = $cell['Accessories Missing '];
             $ogbox = $cell['Original Box'];
             $ogboxtxt = $cell['Original Box'];
-            $bookincomment = $cell['Booking in Comments'];
+            $bookincomment = $cell['Comment '];
+            $damage = $cell['Visual Damaged'];
             $discrepancy  = $cell['Discrepancy'];
             $Datescanned = $cell['Date Scanned'];
 
-            if($ogbox == 'yes'){
+            if($ogbox == 'Y'){
               $ogbox = 1;
             }else{
               $ogbox = 0;
@@ -168,8 +168,9 @@ class ImportController extends Controller
             ['iDataRowId' => Str::uuid(), 'iDataRowId2' => Str::uuid(), 'casenumber' => $nextId, 'Notes' => 'BOOKING IN NOTES : '.$bookincomment,  'CreatedDate'  => $nowdate , 'Visibility' => 'Stone Only'],
             ['iDataRowId' => Str::uuid(), 'iDataRowId2' => Str::uuid(), 'casenumber' => $nextId, 'Notes' => 'ORIGINAL BOX : '.$ogboxtxt, 'CreatedDate' =>  $nowdate , 'Visibility' => 'Stone Only'],
             ['iDataRowId' => Str::uuid(), 'iDataRowId2' => Str::uuid(), 'casenumber' => $nextId, 'Notes' => 'PART NUMBER : '.$acerpart, 'CreatedDate' =>  $nowdate , 'Visibility' => 'Stone Only'],
-            ['iDataRowId' => Str::uuid(), 'iDataRowId2' => Str::uuid(), 'casenumber' => $nextId, 'Notes' => 'MONITOR CODE : '.$montiorcode, 'CreatedDate' =>  $nowdate , 'Visibility' => 'Stone Only'],
             ['iDataRowId' => Str::uuid(), 'iDataRowId2' => Str::uuid(), 'casenumber' => $nextId, 'Notes' => 'MISSING AC : '.$missing, 'CreatedDate' =>  $nowdate , 'Visibility' => 'Stone Only'],
+            ['iDataRowId' => Str::uuid(), 'iDataRowId2' => Str::uuid(), 'casenumber' => $nextId, 'Notes' => 'DAMAGE : '.$damage, 'CreatedDate' =>  $nowdate , 'Visibility' => 'Stone Only'],
+            ['iDataRowId' => Str::uuid(), 'iDataRowId2' => Str::uuid(), 'casenumber' => $nextId, 'Notes' => 'DISCREP : '.$discrepancy, 'CreatedDate' =>  $nowdate , 'Visibility' => 'Stone Only'],
         ]);
 
           // $nextId++;
