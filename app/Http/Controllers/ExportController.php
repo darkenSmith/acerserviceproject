@@ -33,6 +33,18 @@ class ExportController extends Controller{
 
     }
 
+    public function downloadall(){
+   
+   
+        $results = DB::select('select * from [ACER_ALL_imports]()');
+
+        $now = strtotime(now());
+        $nowdate = date("Y-m-d",$now);
+   
+        $filename = 'ACER_Retail-WIP-'.$nowdate;
+        $this->createsheet($results, $filename, 'acer WIP');
+       }
+
 
 
 
@@ -69,6 +81,10 @@ class ExportController extends Controller{
     $sheet->getColumnDimension('L')->setWidth(20);
     $sheet->setCellValue('M1', 'STATUS');
     $sheet->getColumnDimension('M')->setWidth(20);
+    $sheet->setCellValue('N1', 'Grade');
+    $sheet->getColumnDimension('N')->setWidth(20);
+    $sheet->setCellValue('O1', 'BER');
+    $sheet->getColumnDimension('O')->setWidth(20);
     $sheet->setTitle($batch);
 
    

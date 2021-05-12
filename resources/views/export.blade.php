@@ -64,8 +64,12 @@
                      <div class="col-md-12">
                          <button type="submit" class="btn btn-primary" id="submit">Download</button>
                      </div>
-                 </div>     
+                 </div>   
              </form>
+             <br>
+             <form method="GET" enctype="multipart/form-data" id="upload-file" action="{{ url('export/downloadall') }}" >
+                     <button type="submit" class="btn btn-success" id="submit">Download all</button> 
+                     </form>
 </div>
 </div>
 

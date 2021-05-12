@@ -54,6 +54,7 @@ header("Refresh:10");
 </thead>
 <tbody>
 <tr>
+@if(!$contacts->isEmpty())
 @foreach ($data as $d)
     <td>{{ $d->bookedin }}</td>
     <td>{{ $d->dispatched }}</td>
@@ -61,6 +62,9 @@ header("Refresh:10");
     <td>{{ $d->AwaitingInsp }}</td>
     <td>{{ $d->Inspected }}</td>
 @endforeach
+You dont have contacts
+@endif
+
 </tr>
 </tbody>
 </table>

@@ -147,6 +147,7 @@ class ImportController extends Controller
           // dd($id);
 
 
+
           $guid_3 = Str::uuid();
           $guid_4 = Str::uuid();
 
@@ -160,6 +161,19 @@ class ImportController extends Controller
               'ActionDate' => $nowdate 
          
         ]);
+
+        $guid_5 = Str::uuid();
+        $guid_6 = Str::uuid();
+
+        DB::table('SerialNumbers')->insert([
+            'iDataRowId' => $guid_5,
+            'iDataRowId2' =>$guid_6, 
+            'SerialNumber' => $serial,
+            'Partnum' => '_REP_CENTRE_CHARGE',
+            'AccountCode' => 'ACERRETAIL',
+            'Orderid' => 'Repair_ACERRETAI',
+            'Source' => 'MPL'
+          ]);
 
 
           DB::table('CaseNotes')->insert([
